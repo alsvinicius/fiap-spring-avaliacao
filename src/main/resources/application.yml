@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./db/fiap
+  h2:
+    console:
+      enabled: true
