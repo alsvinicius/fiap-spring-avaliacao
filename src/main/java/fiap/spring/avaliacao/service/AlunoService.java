@@ -23,6 +23,10 @@ public class AlunoService {
         alunoRepository.delete(aluno);
     }
 
+    public Aluno update(Integer id, Aluno novoAluno) {
+        return alunoRepository.save(novoAluno);
+    }
+
     public List<Aluno> list() {
         return alunoRepository.findAll();
     }
