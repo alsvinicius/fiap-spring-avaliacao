@@ -21,14 +21,6 @@ public class AlunoController {
         return alunoService.insert(aluno);
     }
 
-    @PatchMapping("/{idAluno}")
-    public Aluno update(
-            @PathVariable Integer idAluno,
-            @RequestBody Aluno aluno
-    ) {
-        return alunoService.update(idAluno, aluno);
-    }
-
     @DeleteMapping("/{id}")
     public ResponseEntity delete(
             @PathVariable Integer id

@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "9b6f8d24-758b-416b-89c4-544195d33ee7",
+		"name": "Fiap Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Aluno",
+			"item": [
+				{
+					"name": "Lista",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aluno/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista por posse de cartão",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aluno/?possuiCartao=false",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								""
+							],
+							"query": [
+								{
+									"key": "possuiCartao",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cria",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rm\": 225544,\r\n    \"nome\": \"Aluno Teste\",\r\n    \"possuiCartao\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/aluno/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aluno/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cartao",
+			"item": [
+				{
+					"name": "Lista",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aluno/1/cartao",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"1",
+								"cartao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Extrato",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aluno/1/cartao/1/extrato",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"1",
+								"cartao",
+								"1",
+								"extrato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cria",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"1234.5678.9012.3456\",\r\n    \"dataValidade\": \"12/27\",\r\n    \"diaVencimento\": 10,\r\n    \"limiteTotal\": 5000.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/aluno/1/cartao",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"1",
+								"cartao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aluno/1/cartao/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"1",
+								"cartao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Compra",
+			"item": [
+				{
+					"name": "Lista",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aluno/1/cartao/1/compra",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"1",
+								"cartao",
+								"1",
+								"compra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cria",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\": \"compra mercado\",\r\n    \"valor\": 95.70\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/aluno/1/cartao/1/compra",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"1",
+								"cartao",
+								"1",
+								"compra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aluno/1/cartao/1/compra/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"1",
+								"cartao",
+								"1",
+								"compra",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
