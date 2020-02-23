@@ -7,6 +7,8 @@
 ## Banco de Dados
 Não é necessário configurar banco de dados, já que a aplicação usa um banco H2 que é criado na primeira execução.
 
+A escolha pelo H2 se deu pela facilidade de configuração e execução da aplicação, além de ser leve para uma aplicação simples como a desenvolvida.
+
 ## Massa para teste
 Após executar a aplicação, copie os arquivos da pasta _massa-testes_ para a pasta _files_ na seguinte ordem:
 1. Alunos
