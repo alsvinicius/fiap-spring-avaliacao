@@ -23,3 +23,6 @@ Na raiz do projeto existe uma collection do Postman salva em json com todos os e
 ## Extrato
 A url pode ser chamada pelo navegador para que o arquivo _.xlsx_ com o extrato seja baixado.
 Exemplo de url: localhost:8080/aluno/1/cartao/1/extrato
+
+## Testes Unitários
+Foram executados testes unitários nos métodos e classes cabíveis. Os models foram excluídos pelos métodos serem gerados através da dependência _lombok_.
