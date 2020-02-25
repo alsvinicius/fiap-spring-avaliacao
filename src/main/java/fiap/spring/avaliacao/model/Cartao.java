@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+import uk.co.jemos.podam.common.PodamExclude;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -13,6 +15,7 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 public class Cartao {
 
     @Id
@@ -28,9 +31,11 @@ public class Cartao {
     private Integer alunoId;
     @ManyToOne
     @JsonIgnore
+    @PodamExclude
     private Aluno aluno;
     @OneToMany(mappedBy = "cartao")
     @JsonIgnore
+    @PodamExclude
     private Set<Compra> transacoes;
 
 }

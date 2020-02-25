@@ -26,3 +26,6 @@ Exemplo de url: localhost:8080/aluno/1/cartao/1/extrato
 
 ## Testes Unitários
 Foram executados testes unitários nos métodos e classes cabíveis. Os models foram excluídos pelos métodos serem gerados através da dependência _lombok_.
+
+## Testes Integrados
+Foi criada a classe de testes _IntegrationTests_, que testa o fluxo da aplicação. Nela, são executadas as operações em um banco de dados de teste, e é validado se as operações foram executadas com sucesso.

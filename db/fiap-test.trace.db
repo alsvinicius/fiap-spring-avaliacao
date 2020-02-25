@@ -1,0 +1,9 @@
+2020-02-24 23:49:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPRA" not found; SQL statement:
+drop table compra [42102-200]
+2020-02-24 23:49:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CARTAO" not found; SQL statement:
+drop table cartao [42102-200]
+2020-02-24 23:49:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ALUNO" not found; SQL statement:
+drop table aluno [42102-200]

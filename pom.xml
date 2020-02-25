@@ -114,8 +114,11 @@
             <version>3.3.0</version>
             <scope>test</scope>
         </dependency>
-
-
+        <dependency>
+            <groupId>uk.co.jemos.podam</groupId>
+            <artifactId>podam</artifactId>
+            <version>7.2.3.RELEASE</version>
+        </dependency>
     </dependencies>
 
     <build>
