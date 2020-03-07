@@ -27,7 +27,7 @@ public class Aluno {
     private Integer id;
     private Integer rm;
     private String nome;
-    private String logradouro, cep, cidade, estado, pais, telefone;
+    private String numeroCadastro;
     private Boolean possuiCartao = false;
     @OneToMany(mappedBy = "aluno")
     @JsonIgnore

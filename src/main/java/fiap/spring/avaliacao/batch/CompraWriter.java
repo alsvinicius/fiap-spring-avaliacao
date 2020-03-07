@@ -23,7 +23,7 @@ public class CompraWriter implements ItemWriter<Compra> {
         }
 
         writeToFile(
-                "./files/pending.csv",
+                "./files/pending.txt",
                 new String("")
         );
     }

@@ -35,7 +35,7 @@ public class BatchCompraConfig {
 
     @Bean
     public FlatFileItemReader<Compra> comprasReader() {
-        String fileName = "./files/pending.csv";
+        String fileName = "./files/pending.txt";
         Resource resource = resourceLoader.getResource("file:" + fileName);
         try {
             resource.getFile();

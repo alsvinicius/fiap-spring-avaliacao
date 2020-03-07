@@ -49,14 +49,14 @@ public class BatchScheduler {
     private void lerArquivos(Stream<Path> files) {
         files.forEach(path -> {
             String fileName = path.getFileName().toString();
-            if (!fileName.equals("pending.csv") && fileName.endsWith(".csv")) {
+            if (!fileName.equals("pending.txt") && fileName.endsWith(".txt")) {
                 try {
                     writeToFile(
-                            "./files/pending.csv",
+                            "./files/pending.txt",
                             new String(Files.readAllBytes(Paths.get(path.toString())))
                     );
                     deleteFile(path.toString());
-                    runJob(fileName.replace(".csv", ""));
+                    runJob(fileName.replace(".txt", ""));
                 } catch (IOException e) {
                     e.printStackTrace();
                     logger.error("Erro ao gravar arquivo.");
@@ -67,6 +67,11 @@ public class BatchScheduler {
 
     private void runJob(String fileName) {
         JobParameters jobParameters = new JobParameters();
+
+        if (fileName.startsWith("lista_")) {
+            fileName = fileName.replace("lista_", "");
+        }
+
         Job jobToRun = (Job) context.getBean(fileName);
         try {
             jobLauncher.run(jobToRun, jobParameters);

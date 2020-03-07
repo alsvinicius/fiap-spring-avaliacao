@@ -23,7 +23,7 @@ public class CartaoWriter implements ItemWriter<Cartao> {
         }
 
         writeToFile(
-                "./files/pending.csv",
+                "./files/pending.txt",
                 new String("")
         );
     }

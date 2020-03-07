@@ -22,7 +22,7 @@ public class AlunoWriter implements ItemWriter<Aluno> {
             alunoService.insert(aluno);
         }
         writeToFile(
-                "./files/pending.csv",
+                "./files/pending.txt",
                 new String("")
         );
     }
