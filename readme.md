@@ -17,6 +17,9 @@ Após executar a aplicação, copie os arquivos da pasta _massa-testes_ para a p
 
 O gatilho do batch está configurado para executar a cada 5 segundos. Logo, serão feitas três execuções, uma para cada arquivo.
 
+## Swagger
+Pode ser acessado através da seguinte URL: localhost:8080/swagger-ui.html
+
 ## Testes dos endpoints
 Na raiz do projeto existe uma collection do Postman salva em json com todos os endpoints da aplicação configurados para serem chamados.
 
