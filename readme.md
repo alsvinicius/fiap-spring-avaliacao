@@ -1,5 +1,4 @@
 ## Avaliação Spring - MBA+ Fiap
-### RM335430
 
 ## Execução
 É necessário apenas dar executar o método main para que a aplicação seja executada.
